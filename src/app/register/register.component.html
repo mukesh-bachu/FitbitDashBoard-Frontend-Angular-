@@ -1,0 +1,52 @@
+<div class="form-container">
+  <p-card header="Sign Up" class="signup-card">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="p-fluid">
+        <!-- Name -->
+        <div class="p-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" pInputText formControlName="name">
+          <small *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="p-error">Name is required and should be at least 2 characters</small>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="p-field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" pInputText formControlName="phone">
+          <small *ngIf="signupForm.get('phone')?.invalid && signupForm.get('phone')?.touched" class="p-error">Phone number is required and must be numeric.</small>
+        </div>
+
+        <!-- Fitbit URL -->
+        <div class="p-field">
+          <label for="fitbiturl">Fitbit URL</label>
+          <input type="url" id="fitbiturl" pInputText formControlName="fitbitUrl">
+          <!-- <small *ngIf="signupForm.get('fitbitUrl')?.invalid && signupForm.get('fitbitUrl')?.touched" class="p-error">Valid Fitbit URL is required.</small> -->
+        </div>
+
+        <!-- Email -->
+        <div class="p-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" pInputText formControlName="email">
+          <small *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="p-error">A valid email is required.</small>
+        </div>
+
+        <!-- Password -->
+        <div class="p-field">
+          <label for="password">Password</label>
+          <p-password inputId="password" formControlName="password"></p-password>
+          <small *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="p-error">Password is required and must be at least 6 characters long.</small>
+        </div>
+
+        <!-- Submit Button -->
+        <button pButton type="submit" label="Submit"></button>
+
+        <!-- Response Message -->
+        <div *ngIf="responseMessage" class="response-message">
+          {{ responseMessage }}
+        </div>
+      </div>
+    </form>
+  </p-card>
+
+  
+</div>

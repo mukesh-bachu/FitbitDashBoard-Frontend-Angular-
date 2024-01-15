@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SaveService {
   private apiUrl = 'http://localhost:8080';
+  errorMessage!: string;
 
   constructor(private http: HttpClient) { }
 
