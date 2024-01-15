@@ -9,7 +9,7 @@ export class AuthService {
   private apiUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
-  login(credentials: { email: string; password: string }): Observable<any> {
+  login(credentials: { email: string; password: string }): Observable<Object> {
     return this.http.post<boolean>(`${this.apiUrl}/api/v1/auth/authenticate`, credentials);
   }
 }

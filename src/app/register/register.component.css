@@ -1,9 +1,10 @@
 /* Container Styling */
 .form-container {
     padding: 2rem;
-    max-width: 500px; /* Adjust based on your preference */
+    max-width: 1000px;
     margin: auto;
 }
+
 
 /* Card Styling */
 .signup-card {

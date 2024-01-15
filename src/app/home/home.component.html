@@ -5,16 +5,18 @@
           <span class="text-6xl text-primary font-bold mb-1"><h1>Fitbit Dashboard</h1></span>
             <span class="block text-2xl font-bold mb-3">Track Your Fitness Journey with Ease</span>
             <div class="text-3xl text-primary font-bold mt-5 mb-3">Consolidate, analyze, and visualize all your fitness data in one intuitive dashboard for easy understanding.</div> 
-            <div class="text-3xl text-primary font-bold mt-5 mb-3">Sign up now for easy, insightful access to your health journey.</div> 
             <button pButton pRipple label="Learn More" type="button" class="mr-3 p-button-raised" [routerLink]="['/']" fragment="features"></button>
+            <div class="text-3xl text-primary font-bold mt-5 mb-3">Sign up now for easy, insightful access to your health journey.</div> 
+            <button pButton pRipple label="Sign Up" type="button" class="p-button-raised" routerLink="/register"></button>
             <div class="block text-2xl font-bold mt-3">Already a  User?</div> 
             <button pButton pRipple label="Sign In" type="button" class="p-button-raised" routerLink="/login"></button>
             
             
         </section>
     </div>
-    <div id="register" class="col-12 md:col-6 overflow-hidden">
-      <app-register></app-register>
+
+    <div class="col-12 md:col-6 overflow-hidden">
+        <img src="assets/images/home.png" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
     </div>
   </div>
   
@@ -78,7 +80,7 @@
           <div class="text-blue-600 font-bold mb-3"><i class="pi pi-prime"></i>&nbsp;POWERED BY Fitbit Dashobaord</div>
           <div class="text-900 font-bold text-5xl mb-3">Join Our Fitness Community</div>
           <div class="text-700 text-2xl mb-5">Connect with like-minded fitness enthusiasts and access a wealth of insights to empower your health journey.</div>
-          <button pButton pRipple label="Sign Up" class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" [routerLink]="['/']" fragment="register"></button>
+          <button pButton pRipple label="Sign Up" class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" [routerLink]="['/register']" fragment="register"></button>
       </div>
     </div>
   

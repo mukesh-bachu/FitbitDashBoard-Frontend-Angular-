@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { User } from '../interfaces/user';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +12,8 @@ export class SaveService {
 
   constructor(private http: HttpClient) { }
 
-  signup(userData: any): Observable<any> {
+  signup(userData: any): Observable<Object> {
     return this.http.post(`${this.apiUrl}/api/v1/auth/register`, userData);
   }
+
 }
